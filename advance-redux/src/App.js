@@ -16,13 +16,9 @@ function App() {
   const notification = useSelector((state) => state.ui.notification);
   
 
-
-
-
-
-  useEffect(()=>{
-    dispatch(getCartData())
-  },[dispatch]);
+useEffect(()=>{
+  dispatch(getCartData())
+},[dispatch])
   
   useEffect(() => {
     // const sendCartData = async () => {
