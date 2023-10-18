@@ -4,6 +4,8 @@ import { toggleCart } from '../../store/cartVisible';
 const CartButton = (props) => {
 
   const dispatch=useDispatch();
+  const cartQuantity=useSelector(state=>state.cart.totalQuantity)
+
 const toggleVisibleHandler=()=>{
   dispatch(toggleCart())
 }
@@ -11,7 +13,7 @@ const toggleVisibleHandler=()=>{
   return (
     <button  onClick={toggleVisibleHandler}className={classes.button}>
       <span>My Cart</span>
-      <span className={classes.badge}>1</span>
+      <span className={classes.badge}>{cartQuantity}</span>
     </button>
   );
 };
